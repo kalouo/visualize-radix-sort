@@ -5,22 +5,118 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" href="/public/favicon.ico" />
-  <title>Code Chrysalis</title>
+  <link rel="stylesheet" href="src/index.css" />
+  <link>
+  <title>Radix Sort Demo</title>
 </head>
-
+<script type="text/javascript" src="/public/bundle.js"></script>
+<script type="text/javascript" src="/src/index.js"></script>
+<!-- <script type="text/javascript" src="/src/Sort.js"></script> -->
 <body>
   <div id="title"></div>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Engineering?"></input>
-    <input type="submit"></input>
-  </form>
+  <div class = "input-numbers-container">
+    <!-- <div class = input-number>1203</div>
+    <div class = input-number>932</div>
+    <div class = input-number>213</div>
+    <div class = input-number>321</div>
+    <div class = input-number>3</div>
+    <div class = input-number>12</div>
+    <div class = input-number>654</div>
+    <div class = input-number>4340</div>
+    <div class = input-number>543</div>
+    <div class = input-number>674</div>
+    <div class = input-number>128</div>
+    <div class = input-number>7854</div>
+    <div class = input-number>324</div>
+    <div class = input-number>434</div>
+    <div class = input-number>913</div> -->
+  </div>
+  <div class = "digit-buckets-container">
+    <div class = "bucket-container">
+      <div class = "bucket" data-id = 0></div>
+      <div class = "bucket-index" >0</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=1 ></div>
+        <div class = "bucket-index" >1</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=2></div>
+        <div class = "bucket-index" >2</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=3></div>
+        <div class = "bucket-index" data-id = 3>3</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=4></div>
+        <div class = "bucket-index" >4</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=5></div>
+        <div class = "bucket-index" >5</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=6></div>
+        <div class = "bucket-index" >6</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=7></div>
+        <div class = "bucket-index" >7</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=8></div>
+        <div class = "bucket-index">8</div>
+    </div>
+    <div class = "bucket-container">
+        <div class = "bucket" data-id=9></div>
+        <div class = "bucket-index">9</div>
+    </div>
+  </div>
+  
+  <button onclick = "generateNumbers(15,5000)" type="" class = "operative-buttons">Generate Random Numbers</button>
+  <button onclick = "arrangeInBuckets()" type="" class = "operative-buttons">Arrange in Buckets</button>
+  <button onclick = "rearrangeAtTop()" type="" class = "operative-buttons">Back to Top</button>
+  <button onclick="window.location.reload()" class = "operative-buttons"> Reset</button>
+  <!-- <button onclick = "runSort()" type="" class = "operative-buttons">Run Full Sort</button> -->
+  
+  <div class = "tracking">
+    <div class = "tracking-keys">
+      <h1>Current Digit</h1>
+      <h1>Equivalent</h1>
+      <h1>Maximum Digits</h1>
+      <h1>Equivalent</h1>
+    </div>
+    <div class = "tracking-values">
+      <h1 class = "tracking-index"></h1>
+      <h1 class = "tracking-index-converted"></h1>
+      <h1 class = "max-digits"></h1>
+      <h1 class = "max-digits-converted"></h1>
+    </div>
+  </div>
+
+
   <!--
     Where is this public/bundle.js file coming from?
     You don't need to look too deeply into it, but it comes
     from our trusty friend, webpack.
   -->
-  <script type="text/javascript" src="/public/bundle.js"></script>
+  <!-- <script language="javascript">
+    const generateButton = document.querySelector(".new-numbers");
+    generateButton.addEventListener('click',() => {
+    //   addNumbersToHTML();
+      const array = randomArray(15,5000);
+      const numbers = document.querySelector(".input-numbers-container")
+      numbers.innerHTML = "";
+      for (let number of array){
+        let numberContainer = document.createElement('div');
+        numberContainer.className = "input-number";
+        numberContainer.textContent = number;
+        numbers.append(numberContainer);
+      }
+    })
+  </script> -->
+  
 </body>
 
 </html>
