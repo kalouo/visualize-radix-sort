@@ -28,6 +28,7 @@ function ongoingSort() {
   return Number(document.querySelector(".tracking-index").innerText) > 1;
 }
 
+// eslint-disable-next-line no-unused-vars
 function generateNumbers(size, max) {
   if (!bucketsEmpty() || ongoingSort()) return;
   const array = randomArray(size, max);
@@ -78,6 +79,7 @@ function getDigit(num, i) {
     : Number(String(num)[String(num).length - i - 1]);
 }
 
+// eslint-disable-next-line no-unused-vars
 function arrangeInBuckets() {
   const numberBalls = Array.from(
     document.querySelector(".input-numbers-container").children
@@ -91,6 +93,7 @@ function arrangeInBuckets() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function rearrangeAtTop() {
   const top = document.querySelector(".input-numbers-container");
   for (let i = 0; i < 10; i++) {
