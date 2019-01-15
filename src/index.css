@@ -1,3 +1,70 @@
 body {
+  background-color: #436cad;
+}
+
+.input-numbers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.input-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   background-color: #55b491;
+  width: 40px;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.digit-buckets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bucket-container {
+  flex-direction: column;
+  padding: 10px;
+}
+
+.bucket-index {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.bucket {
+  background-color: aliceblue;
+  width: 40px;
+  min-height: 200px;
+  background-color: #de713b;
+}
+
+.operative-buttons {
+  width: auto;
+  height: 20px;
+  color: white;
+  background-color: #55b491;
+}
+.tracking {
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  margin-left: 2px;
+  margin-top: 10px;
+  font-size: 6px;
+  color: white;
+}
+.tracking-keys {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.tracking-values {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
