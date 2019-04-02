@@ -11,7 +11,7 @@
     "webpack": "webpack --watch --progress --colors",
     "serve": "nodemon app.js",
     "precommit": "pretty-quick --staged",
-    "heroku-postbuild":"yarn webpack && yarn start"
+    "heroku-postbuild":"yarn webpack && yarn serve"
   },
   "repository": {
     "type": "git"
