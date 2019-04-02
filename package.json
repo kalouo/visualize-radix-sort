@@ -8,9 +8,10 @@
     "test:mocha": "mocha --reporter nyan",
     "lint": "eslint --fix --ext .js src test app.js",
     "test": "yarn test:mocha && yarn lint",
-    "start": "webpack --watch --progress --colors",
+    "webpack": "webpack --watch --progress --colors",
     "serve": "nodemon app.js",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "heroku-postbuild":"yarn webpack && yarn start"
   },
   "repository": {
     "type": "git"
