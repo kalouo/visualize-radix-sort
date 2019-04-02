@@ -41,6 +41,3 @@ $ yarn start
 ```
 
 You will need to run `yarn serve` and `yarn start` in separate command line windows/tabs.
-
---
-This project was undertaken in my time as a student at Code Chrysalis.
